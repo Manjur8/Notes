@@ -7,11 +7,12 @@ The use() hook lets components directly read promises, async functions, or conte
 How to answer in interview:
 “use() allows React components to suspend until a promise resolves—whether it's a fetch call or a server action. It simplifies async logic by removing useEffect + useState patterns.”
 
-```function User() {
+```
+function User() {
   const user = use(fetchUser()); // Suspends automatically
   return <div>Hello {user.name}</div>;
-}```
-
+}
+```
 ### 2. New Server Actions
 
 What they are:
@@ -20,10 +21,12 @@ A way to define server-executed functions directly inside your component file.
 Interview answer:
 “Server Actions let me run backend logic without a separate API route. React handles serialization, calling, caching, and revalidation automatically.”
 
-```async function save(formData) {
+```
+async function save(formData) {
   "use server";
   await db.user.create(formData);
-}```
+}
+```
 
 ### 3. useOptimistic()
 
@@ -33,10 +36,12 @@ Temporary UI updates before the server confirms.
 Interview answer:
 “It enables optimistic UI—React updates the UI instantly and later reconciles the real result from the server.”
 
-```const [messages, addOptimistic] = useOptimistic(
+```
+const [messages, addOptimistic] = useOptimistic(
   messageList,
   (state, newMessage) => [...state, newMessage]
-);```
+);
+```
 
 ### 4. useActionState()
 
@@ -46,7 +51,9 @@ Manage UI state of server actions (pending, success, error).
 Interview answer:
 “Instead of useState + useEffect + try/catch, useActionState gives me a predictable state machine around server actions.”
 
-```const [state, submit] = useActionState(savePost, initialState);```
+```
+const [state, submit] = useActionState(savePost, initialState);
+```
 
 ### 5. Enhanced useFormStatus()
 
