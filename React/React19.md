@@ -13,13 +13,9 @@ function User() {
   return <div>Hello {user.name}</div>;
 }
 ```
-### 2. New Server Actions
+### 2. Server Actions
 
-What they are:
-A way to define server-executed functions directly inside your component file.
-
-Interview answer:
-“Server Actions let me run backend logic without a separate API route. React handles serialization, calling, caching, and revalidation automatically.”
+https://github.com/Manjur8/Notes/blob/main/Next/1.md#4-what-are-server-actions-in-nextjs
 
 ```
 async function save(formData) {
