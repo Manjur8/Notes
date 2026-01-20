@@ -32,6 +32,8 @@ Temporary UI updates before the server confirms.
 Interview answer:
 “It enables optimistic UI—React updates the UI instantly and later reconciles the real result from the server.”
 
+https://github.com/Manjur8/Notes/blob/main/Next/1.md#14-explain-optimistic-ui-in-nextjs-with-server-actions
+
 ```
 const [messages, addOptimistic] = useOptimistic(
   messageList,
@@ -84,6 +86,8 @@ Interview answer:
 
 Interview answer:
 “React 19 stabilizes RSC. Heavy logic—data fetching, large dependencies—runs on the server. The client receives a minimal bundle, improving startup time.”
+
+https://github.com/Manjur8/Notes/blob/main/Next/1.md#2-what-exactly-are-react-server-components-rsc-in-nextjs
 
 ### 9. Asset Loading APIs
 
