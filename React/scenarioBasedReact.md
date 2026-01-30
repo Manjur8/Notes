@@ -62,6 +62,8 @@ Next, I ensure I'm not doing layout thrashing—so I batch DOM reads and writes.
 If the page has many elements, I implement virtualization.
 Finally, I ensure CSS animations use GPU-accelerated properties like transform and opacity.
 
+Layout thrashing is a web performance anti-pattern where JavaScript code repeatedly forces a web browser to synchronously recalculate the layout (position and dimensions) of elements in a document. This is an expensive operation that can significantly degrade page responsiveness, especially on lower-powered devices. 
+
 ### 8. You have a deeply nested component tree suffering from prop drilling. How do you fix it?
 
 Answer:
